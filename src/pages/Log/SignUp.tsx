@@ -90,7 +90,7 @@ export default function SignUp(){
                 dispatch(updateData({token: response.data.token,user: response.data.user}))
             }
             closeLoader();
-        }catch(err){            
+        }catch(err:any){            
             closeLoader();
             console.log(err);
             if(err.status === 422){

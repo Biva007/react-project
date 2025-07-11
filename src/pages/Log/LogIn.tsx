@@ -9,7 +9,7 @@ import AppMessage from '../../components/AppMessage/AppMessage';
 import axios from 'axios';
 
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { updateData } from '../../Store/Slices/Auth';
 
 
@@ -86,7 +86,7 @@ export default function LogIn(){
                 dispatch(updateData({token: response.data.token,user: response.data.user}))
             }
             closeLoader();
-        }catch(err){            
+        }catch(err:any){            
             closeLoader();
             if(err.status === 422){
                 message('Email and Password not match !');
