@@ -1,0 +1,11 @@
+Resources:
+  MyLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: my-pipeline-fn
+      Handler: index.handler
+      Runtime: python3.12
+      Role: arn:aws:iam::123456789012:role/lambda-execution-role
+      Code:
+        S3Bucket: mystackbucket
+        S3Key: my-lambda-code.zip
