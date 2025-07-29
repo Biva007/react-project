@@ -7,5 +7,5 @@ Resources:
       Runtime: python3.12
       Role: arn:aws:iam::123456789012:role/lambda-execution-role
       Code:
-        S3Bucket: mystackbucket
+        S3Bucket: mybucketS3STACK
         S3Key: my-lambda-code.zip
